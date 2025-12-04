@@ -1,0 +1,15 @@
+{
+  "name": "dembrandt-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Dembrandt - Design System Extractor",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./ --dist-dir dist && cp src/CNAME dist/CNAME"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
+}

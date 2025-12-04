@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dembrandt - Extract Design Systems Instantly</title>
+  <meta name="description" content="Extract any website's design system into design tokens in seconds. One command to analyze colors, typography, spacing, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-gray-950 to-purple-950 opacity-50"></div>
+
+    <!-- Animated Grid -->
+    <div class="absolute inset-0 bg-grid opacity-10"></div>
+
+    <div class="relative">
+      <!-- Navigation -->
+      <nav class="container mx-auto px-6 py-8">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-gradient-to-br from-brand-400 to-purple-500 rounded-lg"></div>
+            <span class="text-2xl font-bold">Dembrandt</span>
+          </div>
+          <div class="flex items-center space-x-6">
+            <a href="https://github.com/yourusername/dembrandt" class="text-gray-300 hover:text-white transition-colors">GitHub</a>
+            <a href="#docs" class="text-gray-300 hover:text-white transition-colors">Docs</a>
+            <a href="https://www.npmjs.com/package/dembrandt" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg transition-colors font-medium">Install</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="container mx-auto px-6 pt-20 pb-32">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-block mb-6 px-4 py-2 bg-brand-900/30 border border-brand-700/50 rounded-full text-brand-300 text-sm font-medium">
+            Extract • Analyze • Transform
+          </div>
+
+          <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-brand-200 to-purple-200 bg-clip-text text-transparent leading-tight">
+            Extract Design Systems
+            <br>
+            <span class="text-brand-400">In Seconds</span>
+          </h1>
+
+          <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            One command to extract colors, typography, spacing, and design tokens from any website.
+            Perfect for brand audits, competitive analysis, and design system documentation.
+          </p>
+
+          <!-- Installation -->
+          <div class="mb-8">
+            <div class="inline-block bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-left">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm text-gray-400 font-mono">Terminal</span>
+                <button class="text-xs text-brand-400 hover:text-brand-300 transition-colors font-mono" onclick="copyToClipboard('npx dembrandt bmw.de')">
+                  Copy
+                </button>
+              </div>
+              <code class="text-brand-300 font-mono text-lg">
+                <span class="text-purple-400">npx</span> dembrandt <span class="text-gray-400">bmw.de</span>
+              </code>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center space-x-4">
+            <a href="#get-started" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-xl font-semibold text-lg transition-all transform hover:scale-105">
+              Get Started
+            </a>
+            <a href="https://github.com/yourusername/dembrandt" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl font-semibold text-lg transition-all">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container mx-auto px-6 py-24">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">Everything You Need</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Colors & Palettes</h3>
+          <p class="text-gray-400 leading-relaxed">Extract brand colors with confidence scoring. Semantic colors, CSS variables, and full color palettes.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-purple-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Typography</h3>
+          <p class="text-gray-400 leading-relaxed">Font families, sizes, weights, and sources. Complete typography scale extraction.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-emerald-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
+          <p class="text-gray-400 leading-relaxed">Parallel extraction with Playwright. Get results in seconds, not minutes.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-orange-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Spacing & Layout</h3>
+          <p class="text-gray-400 leading-relaxed">Margin/padding scales, borders, shadows, and breakpoints automatically detected.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-pink-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Component Analysis</h3>
+          <p class="text-gray-400 leading-relaxed">Extract button styles, inputs, links, and other UI component patterns.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
+          <div class="w-12 h-12 bg-cyan-900/30 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">JSON Export</h3>
+          <p class="text-gray-400 leading-relaxed">Export design tokens as JSON for direct integration into your design system.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use Cases -->
+  <div class="container mx-auto px-6 py-24">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16">Built For Teams</h2>
+
+      <div class="space-y-6">
+        <div class="bg-gradient-to-r from-brand-900/20 to-purple-900/20 border border-brand-700/30 rounded-xl p-6">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
+              <span class="text-sm font-bold">01</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Brand Audits & Competitive Analysis</h3>
+              <p class="text-gray-400">Compare design systems across competitors. Extract and analyze brand consistency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-700/30 rounded-xl p-6">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+              <span class="text-sm font-bold">02</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Design System Documentation</h3>
+              <p class="text-gray-400">Automatically document existing design systems. Generate design token JSON files.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-pink-900/20 to-orange-900/20 border border-pink-700/30 rounded-xl p-6">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center">
+              <span class="text-sm font-bold">03</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Multi-Site Brand Consolidation</h3>
+              <p class="text-gray-400">Analyze design consistency across multiple properties. Identify divergence and opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="container mx-auto px-6 py-24">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="bg-gradient-to-r from-brand-900/30 to-purple-900/30 border border-brand-700/50 rounded-3xl p-12">
+        <h2 class="text-4xl font-bold mb-6">Ready to Extract?</h2>
+        <p class="text-xl text-gray-300 mb-8">Get started in seconds. No configuration required.</p>
+
+        <div class="inline-block bg-gray-900 border border-gray-700 rounded-xl p-6 mb-8">
+          <code class="text-brand-300 font-mono text-lg">
+            <span class="text-purple-400">npm</span> install -g dembrandt
+          </code>
+        </div>
+
+        <div class="flex items-center justify-center space-x-4">
+          <a href="https://www.npmjs.com/package/dembrandt" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-xl font-semibold text-lg transition-all transform hover:scale-105">
+            Install Now
+          </a>
+          <a href="https://github.com/yourusername/dembrandt" class="px-8 py-4 bg-transparent hover:bg-gray-800 border border-gray-700 rounded-xl font-semibold text-lg transition-all">
+            View Docs
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <div class="w-6 h-6 bg-gradient-to-br from-brand-400 to-purple-500 rounded-lg"></div>
+          <span class="font-bold">Dembrandt</span>
+        </div>
+        <div class="flex items-center space-x-6 text-sm text-gray-400">
+          <a href="https://github.com/yourusername/dembrandt" class="hover:text-white transition-colors">GitHub</a>
+          <a href="#docs" class="hover:text-white transition-colors">Documentation</a>
+          <a href="https://www.npmjs.com/package/dembrandt" class="hover:text-white transition-colors">npm</a>
+          <span>MIT License</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>
