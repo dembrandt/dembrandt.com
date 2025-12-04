@@ -4,7 +4,7 @@
   "description": "Landing page for Dembrandt - Design System Extractor",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./ --dist-dir dist && cp src/CNAME dist/CNAME"
+    "build": "parcel build src/index.html --public-url ./ --dist-dir dist && cp src/CNAME dist/CNAME && touch dist/.nojekyll"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.11.0",

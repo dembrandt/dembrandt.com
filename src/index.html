@@ -1,79 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dembrandt - Extract Design Systems Instantly</title>
   <meta name="description" content="Extract any website's design system into design tokens in seconds. One command to analyze colors, typography, spacing, and more.">
+  <link rel="icon" type="image/png" href="../dembrandt-logo.png">
+  <meta property="og:image" content="../dembrandt-logo.png">
+  <meta property="og:title" content="Dembrandt - Extract Design Systems Instantly">
+  <meta property="og:description" content="Extract any website's design system into design tokens in seconds. One command to analyze colors, typography, spacing, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-gray-950 text-gray-100">
+<body class="bg-gray-950 text-gray-100 antialiased">
 
   <!-- Hero Section -->
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden min-h-screen">
     <!-- Gradient Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-gray-950 to-purple-950 opacity-50"></div>
+    <div class="absolute inset-0 bg-gradient-radial from-brand-900/20 via-gray-950 to-gray-950"></div>
 
     <!-- Animated Grid -->
     <div class="absolute inset-0 bg-grid opacity-10"></div>
 
+    <!-- Floating Orbs -->
+    <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+
     <div class="relative">
       <!-- Navigation -->
-      <nav class="container mx-auto px-6 py-8">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-2">
-            <div class="w-8 h-8 bg-gradient-to-br from-brand-400 to-purple-500 rounded-lg"></div>
-            <span class="text-2xl font-bold">Dembrandt</span>
-          </div>
-          <div class="flex items-center space-x-6">
-            <a href="https://github.com/dembrandt/dembrandt.com" class="text-gray-300 hover:text-white transition-colors">GitHub</a>
-            <a href="#docs" class="text-gray-300 hover:text-white transition-colors">Docs</a>
-            <a href="https://www.npmjs.com/package/dembrandt" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg transition-colors font-medium">Install</a>
+      <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gray-950/80 border-b border-gray-800/50">
+        <div class="container mx-auto px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <a href="/" class="group">
+                <img src="../dembrandt-logo.png" alt="Dembrandt Logo" class="h-8 w-auto group-hover:scale-105 transition-transform duration-200">
+              </a>
+            </div>
+            <div class="flex items-center space-x-8">
+              <a href="https://github.com/dembrandt/dembrandt.com" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">GitHub</a>
+              <a href="#docs" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Docs</a>
+              <a href="https://www.npmjs.com/package/dembrandt" class="btn-primary">
+                Install
+              </a>
+            </div>
           </div>
         </div>
       </nav>
 
       <!-- Hero Content -->
-      <div class="container mx-auto px-6 pt-20 pb-32">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="inline-block mb-6 px-4 py-2 bg-brand-900/30 border border-brand-700/50 rounded-full text-brand-300 text-sm font-medium">
-            Extract • Analyze • Transform
+      <div class="container mx-auto px-6 pt-32 pb-20">
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="inline-flex items-center space-x-2 mb-8 px-4 py-2 bg-brand-900/20 backdrop-blur-sm border border-brand-700/30 rounded-full text-brand-300 text-sm font-medium animate-fade-in-up">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+            </span>
+            <span>Extract • Analyze • Transform</span>
           </div>
 
-          <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-brand-200 to-purple-200 bg-clip-text text-transparent leading-tight">
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 bg-gradient-to-r from-white via-brand-200 to-purple-200 bg-clip-text text-transparent leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
             Extract Design Systems
             <br>
-            <span class="text-brand-400">In Seconds</span>
+            <span class="bg-gradient-to-r from-brand-400 to-purple-400 bg-clip-text text-transparent">In Seconds</span>
           </h1>
 
-          <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
             One command to extract colors, typography, spacing, and design tokens from any website.
-            Perfect for brand audits, competitive analysis, and design system documentation.
+            <span class="text-gray-500">Perfect for brand audits, competitive analysis, and design system documentation.</span>
           </p>
 
           <!-- Installation -->
-          <div class="mb-8">
-            <div class="inline-block bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-left">
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-sm text-gray-400 font-mono">Terminal</span>
-                <button class="text-xs text-brand-400 hover:text-brand-300 transition-colors font-mono" onclick="copyToClipboard('npx dembrandt bmw.de')">
-                  Copy
+          <div class="mb-10 animate-fade-in-up animation-delay-300">
+            <div class="inline-block glass-card rounded-2xl p-8 text-left shadow-2xl">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Terminal</span>
+                <button id="copyBtn" class="text-xs text-brand-400 hover:text-brand-300 transition-colors font-mono px-3 py-1 rounded-lg hover:bg-brand-900/20" onclick="copyToClipboard('npx dembrandt bmw.de')">
+                  <span id="copyText">Copy</span>
                 </button>
               </div>
-              <code class="text-brand-300 font-mono text-lg">
-                <span class="text-purple-400">npx</span> dembrandt <span class="text-gray-400">bmw.de</span>
+              <code class="text-brand-300 font-mono text-lg md:text-xl font-medium">
+                <span class="text-purple-400">npx</span> dembrandt <span class="text-gray-500">bmw.de</span>
               </code>
             </div>
           </div>
 
-          <div class="flex items-center justify-center space-x-4">
-            <a href="#get-started" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-xl font-semibold text-lg transition-all transform hover:scale-105">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-400">
+            <a href="#get-started" class="btn-primary-large group">
               Get Started
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
             </a>
-            <a href="https://github.com/dembrandt/dembrandt.com" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl font-semibold text-lg transition-all">
+            <a href="https://github.com/dembrandt/dembrandt.com" class="btn-secondary-large group">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+              </svg>
               View on GitHub
             </a>
           </div>
@@ -83,118 +106,124 @@
   </div>
 
   <!-- Features Section -->
-  <div class="container mx-auto px-6 py-24">
+  <div class="container mx-auto px-6 py-32">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-16">Everything You Need</h2>
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Everything You Need</h2>
+        <p class="text-xl text-gray-500 max-w-2xl mx-auto">Production-ready design system extraction built for modern teams</p>
+      </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-6">
         <!-- Feature 1 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-brand-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-brand-500/20 to-brand-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">Colors & Palettes</h3>
-          <p class="text-gray-400 leading-relaxed">Extract brand colors with confidence scoring. Semantic colors, CSS variables, and full color palettes.</p>
+          <p class="text-gray-500 leading-relaxed">Extract brand colors with confidence scoring. Semantic colors, CSS variables, and full color palettes.</p>
         </div>
 
         <!-- Feature 2 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-purple-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">Typography</h3>
-          <p class="text-gray-400 leading-relaxed">Font families, sizes, weights, and sources. Complete typography scale extraction.</p>
+          <p class="text-gray-500 leading-relaxed">Font families, sizes, weights, and sources. Complete typography scale extraction.</p>
         </div>
 
         <!-- Feature 3 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-emerald-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
-          <p class="text-gray-400 leading-relaxed">Parallel extraction with Playwright. Get results in seconds, not minutes.</p>
+          <p class="text-gray-500 leading-relaxed">Parallel extraction with Playwright. Get results in seconds, not minutes.</p>
         </div>
 
         <!-- Feature 4 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-orange-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">Spacing & Layout</h3>
-          <p class="text-gray-400 leading-relaxed">Margin/padding scales, borders, shadows, and breakpoints automatically detected.</p>
+          <p class="text-gray-500 leading-relaxed">Margin/padding scales, borders, shadows, and breakpoints automatically detected.</p>
         </div>
 
         <!-- Feature 5 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-pink-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">Component Analysis</h3>
-          <p class="text-gray-400 leading-relaxed">Extract button styles, inputs, links, and other UI component patterns.</p>
+          <p class="text-gray-500 leading-relaxed">Extract button styles, inputs, links, and other UI component patterns.</p>
         </div>
 
         <!-- Feature 6 -->
-        <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 hover:border-brand-700/50 transition-all">
-          <div class="w-12 h-12 bg-cyan-900/30 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="feature-card group">
+          <div class="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
             </svg>
           </div>
           <h3 class="text-xl font-semibold mb-3">JSON Export</h3>
-          <p class="text-gray-400 leading-relaxed">Export design tokens as JSON for direct integration into your design system.</p>
+          <p class="text-gray-500 leading-relaxed">Export design tokens as JSON for direct integration into your design system.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Use Cases -->
-  <div class="container mx-auto px-6 py-24">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-16">Built For Teams</h2>
+  <div class="container mx-auto px-6 py-32">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Built For Teams</h2>
+        <p class="text-xl text-gray-500">Trusted by designers and developers at leading companies</p>
+      </div>
 
       <div class="space-y-6">
-        <div class="bg-gradient-to-r from-brand-900/20 to-purple-900/20 border border-brand-700/30 rounded-xl p-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-              <span class="text-sm font-bold">01</span>
+        <div class="use-case-card group">
+          <div class="flex items-start space-x-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform duration-300">
+              01
             </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Brand Audits & Competitive Analysis</h3>
-              <p class="text-gray-400">Compare design systems across competitors. Extract and analyze brand consistency.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-700/30 rounded-xl p-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
-              <span class="text-sm font-bold">02</span>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Design System Documentation</h3>
-              <p class="text-gray-400">Automatically document existing design systems. Generate design token JSON files.</p>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-3">Brand Audits & Competitive Analysis</h3>
+              <p class="text-gray-500 text-lg">Compare design systems across competitors. Extract and analyze brand consistency.</p>
             </div>
           </div>
         </div>
 
-        <div class="bg-gradient-to-r from-pink-900/20 to-orange-900/20 border border-pink-700/30 rounded-xl p-6">
-          <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center">
-              <span class="text-sm font-bold">03</span>
+        <div class="use-case-card group">
+          <div class="flex items-start space-x-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300">
+              02
             </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Multi-Site Brand Consolidation</h3>
-              <p class="text-gray-400">Analyze design consistency across multiple properties. Identify divergence and opportunities.</p>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-3">Design System Documentation</h3>
+              <p class="text-gray-500 text-lg">Automatically document existing design systems. Generate design token JSON files.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="use-case-card group">
+          <div class="flex items-start space-x-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-pink-500/30 group-hover:scale-110 transition-transform duration-300">
+              03
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-3">Multi-Site Brand Consolidation</h3>
+              <p class="text-gray-500 text-lg">Analyze design consistency across multiple properties. Identify divergence and opportunities.</p>
             </div>
           </div>
         </div>
@@ -203,43 +232,46 @@
   </div>
 
   <!-- CTA Section -->
-  <div class="container mx-auto px-6 py-24">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="bg-gradient-to-r from-brand-900/30 to-purple-900/30 border border-brand-700/50 rounded-3xl p-12">
-        <h2 class="text-4xl font-bold mb-6">Ready to Extract?</h2>
-        <p class="text-xl text-gray-300 mb-8">Get started in seconds. No configuration required.</p>
+  <div class="container mx-auto px-6 py-32">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative overflow-hidden cta-card text-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-500/10 to-purple-500/10"></div>
+        <div class="relative z-10 p-16">
+          <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Extract?</h2>
+          <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Get started in seconds. No configuration required.</p>
 
-        <div class="inline-block bg-gray-900 border border-gray-700 rounded-xl p-6 mb-8">
-          <code class="text-brand-300 font-mono text-lg">
-            <span class="text-purple-400">npm</span> install -g dembrandt
-          </code>
-        </div>
+          <div class="inline-block glass-card rounded-2xl p-6 mb-10">
+            <code class="text-brand-300 font-mono text-lg font-medium">
+              <span class="text-purple-400">npm</span> install -g dembrandt
+            </code>
+          </div>
 
-        <div class="flex items-center justify-center space-x-4">
-          <a href="https://www.npmjs.com/package/dembrandt" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-xl font-semibold text-lg transition-all transform hover:scale-105">
-            Install Now
-          </a>
-          <a href="https://github.com/dembrandt/dembrandt.com" class="px-8 py-4 bg-transparent hover:bg-gray-800 border border-gray-700 rounded-xl font-semibold text-lg transition-all">
-            View Docs
-          </a>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://www.npmjs.com/package/dembrandt" class="btn-primary-large">
+              Install Now
+            </a>
+            <a href="https://github.com/dembrandt/dembrandt.com" class="btn-secondary-large">
+              View Docs
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-800 py-12">
+  <footer class="border-t border-gray-800/50 py-16">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="flex items-center space-x-2 mb-4 md:mb-0">
-          <div class="w-6 h-6 bg-gradient-to-br from-brand-400 to-purple-500 rounded-lg"></div>
-          <span class="font-bold">Dembrandt</span>
+        <div class="flex items-center space-x-3 mb-6 md:mb-0">
+          <div class="w-8 h-8 bg-gradient-to-br from-brand-400 to-purple-500 rounded-xl shadow-lg"></div>
+          <span class="font-bold text-lg">Dembrandt</span>
         </div>
-        <div class="flex items-center space-x-6 text-sm text-gray-400">
+        <div class="flex items-center space-x-8 text-sm text-gray-500">
           <a href="https://github.com/dembrandt/dembrandt.com" class="hover:text-white transition-colors">GitHub</a>
           <a href="#docs" class="hover:text-white transition-colors">Documentation</a>
           <a href="https://www.npmjs.com/package/dembrandt" class="hover:text-white transition-colors">npm</a>
-          <span>MIT License</span>
+          <span class="text-gray-600">MIT License</span>
         </div>
       </div>
     </div>
@@ -247,8 +279,17 @@
 
   <script>
     function copyToClipboard(text) {
+      const btn = document.getElementById('copyBtn');
+      const btnText = document.getElementById('copyText');
+
       navigator.clipboard.writeText(text).then(() => {
-        alert('Copied to clipboard!');
+        btnText.textContent = 'Copied!';
+        btn.classList.add('text-emerald-400');
+
+        setTimeout(() => {
+          btnText.textContent = 'Copy';
+          btn.classList.remove('text-emerald-400');
+        }, 2000);
       });
     }
   </script>
