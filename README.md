@@ -40,7 +40,7 @@ Output goes to `dist/` folder.
 2. **Push to main branch** - The GitHub Action will automatically:
    - Build the site
    - Deploy to GitHub Pages
-   - Available at `https://yourusername.github.io/dembrandt.com`
+   - Available at `https://dembrandt.github.io/dembrandt.com`
 
 ### Gandi DNS Configuration
 
@@ -60,10 +60,8 @@ To use your custom domain `dembrandt.com`:
    A       @       185.199.109.153
    A       @       185.199.110.153
    A       @       185.199.111.153
-   CNAME   www     yourusername.github.io.
+   CNAME   www     dembrandt.github.io.
    ```
-
-   Replace `yourusername` with your GitHub username.
 
 3. **Wait for DNS propagation** (can take up to 24 hours, usually faster)
 
@@ -75,7 +73,7 @@ If using a subdomain like `www.dembrandt.com`:
 
 ```
 Type    Name    Value
-CNAME   www     yourusername.github.io.
+CNAME   www     dembrandt.github.io.
 ```
 
 Update `src/CNAME` to:
