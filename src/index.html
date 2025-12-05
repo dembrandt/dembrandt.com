@@ -5,19 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dembrandt - Extract Design Systems Instantly</title>
   <meta name="description" content="Extract any website's design system into design tokens in seconds. One command to analyze colors, typography, spacing, and more.">
-  <link rel="icon" type="image/png" href="../dembrandt-logo.png">
-  <meta property="og:image" content="../dembrandt-logo.png">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <meta property="og:image" content="./dembrandt-logo.png">
   <meta property="og:title" content="Dembrandt - Extract Design Systems Instantly">
   <meta property="og:description" content="Extract any website's design system into design tokens in seconds. One command to analyze colors, typography, spacing, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="bg-gray-950 text-gray-100 antialiased">
 
+  <!-- Skip to main content for keyboard navigation -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gray-950/80 border-b border-gray-800/50" role="navigation" aria-label="Main navigation">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="/" class="group">
+            <img src="./dembrandt-logo.png" alt="Dembrandt Logo" class="h-7 sm:h-8 w-auto group-hover:scale-105 transition-transform duration-200">
+          </a>
+        </div>
+        <div class="flex items-center space-x-4 sm:space-x-8">
+          <a href="https://github.com/thevangelist/dembrandt" class="text-fluid-sm text-gray-400 hover:text-white transition-colors duration-200 inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" style="width: 1.75em; height: 1.75em;" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+            </svg>
+            <span class="hidden sm:inline">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <div class="relative overflow-hidden min-h-screen">
+  <main id="main-content" class="relative overflow-hidden min-h-screen flex flex-col items-center justify-center" role="main">
     <!-- Gradient Background -->
     <div class="absolute inset-0 bg-gradient-radial from-brand-900/20 via-gray-950 to-gray-950"></div>
 
@@ -27,74 +51,113 @@
     <!-- Floating Orbs -->
     <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl animate-float"></div>
     <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+    <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-slow"></div>
 
-    <div class="relative">
-      <!-- Navigation -->
-      <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gray-950/80 border-b border-gray-800/50">
-        <div class="container mx-auto px-6 py-4">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <a href="/" class="group">
-                <img src="../dembrandt-logo.png" alt="Dembrandt Logo" class="h-8 w-auto group-hover:scale-105 transition-transform duration-200">
-              </a>
-            </div>
-            <div class="flex items-center space-x-8">
-              <a href="https://github.com/dembrandt/dembrandt.com" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">GitHub</a>
-              <a href="#docs" class="text-sm text-gray-400 hover:text-white transition-colors duration-200">Docs</a>
-              <a href="https://www.npmjs.com/package/dembrandt" class="btn-primary">
-                Install
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero Content -->
-      <div class="container mx-auto px-6 pt-32 pb-20">
+    <!-- Hero Content -->
+    <div class="relative w-full flex-1 flex items-center justify-center py-16 sm:py-20 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto text-center">
-          <div class="inline-flex items-center space-x-2 mb-8 px-4 py-2 bg-brand-900/20 backdrop-blur-sm border border-brand-700/30 rounded-full text-brand-300 text-sm font-medium animate-fade-in-up">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
-            </span>
-            <span>Extract • Analyze • Transform</span>
+          <!-- Stats -->
+          <div class="flex items-center justify-center gap-4 sm:gap-6 mb-8 mt-12 sm:mt-16 animate-fade-in-up px-4">
+            <a href="https://github.com/thevangelist/dembrandt" class="flex items-center gap-2 px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-brand-500/50 transition-all duration-200 group">
+              <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-400 transition-colors" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path>
+              </svg>
+              <span class="text-fluid-sm font-semibold text-gray-300 group-hover:text-white transition-colors" id="github-stars">---</span>
+              <span class="text-fluid-xs text-gray-500">stars</span>
+            </a>
+            <a href="https://www.npmjs.com/package/dembrandt" class="flex items-center gap-2 px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-brand-500/50 transition-all duration-200 group">
+              <svg class="w-4 h-4 text-gray-400 group-hover:text-brand-400 transition-colors" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l7.45 3.73L12 11.82 4.55 7.91 12 4.18zM4 9.5l7 3.5v6.82l-7-3.5V9.5zm9 10.32V13l7-3.5v6.82l-7 3.5z"/>
+              </svg>
+              <span class="text-fluid-sm font-semibold text-gray-300 group-hover:text-white transition-colors" id="npm-downloads">---</span>
+              <span class="text-fluid-xs text-gray-500">downloads</span>
+            </a>
           </div>
 
-          <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 bg-gradient-to-r from-white via-brand-200 to-purple-200 bg-clip-text text-transparent leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
+          <h1 class="text-fluid-hero font-extrabold mb-6 sm:mb-8 bg-gradient-to-r from-white via-brand-200 to-purple-200 bg-clip-text text-transparent leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100 group cursor-default px-4" style="font-variation-settings: 'wght' 900;">
             Extract Design Systems
             <br>
-            <span class="bg-gradient-to-r from-brand-400 to-purple-400 bg-clip-text text-transparent">In Seconds</span>
+            <span class="bg-gradient-to-r from-brand-400 to-purple-400 bg-clip-text text-transparent inline-flex items-center gap-2 sm:gap-3 justify-center">
+              In Seconds
+              <span class="text-fluid-xl opacity-0 group-hover:opacity-100 transition-all duration-300 inline-block group-hover:rotate-[360deg] group-hover:scale-150">✨</span>
+            </span>
           </h1>
 
-          <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
-            One command to extract colors, typography, spacing, and design tokens from any website.
-            <span class="text-gray-500">Perfect for brand audits, competitive analysis, and design system documentation.</span>
+          <p class="text-fluid-2xl text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200 px-4">
+            One command extracts any site's full design system instantly. Perfect for audits, competitor research, and documentation.
           </p>
 
           <!-- Installation -->
-          <div class="mb-10 animate-fade-in-up animation-delay-300">
-            <div class="inline-block glass-card rounded-2xl p-8 text-left shadow-2xl">
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Terminal</span>
-                <button id="copyBtn" class="text-xs text-brand-400 hover:text-brand-300 transition-colors font-mono px-3 py-1 rounded-lg hover:bg-brand-900/20" onclick="copyToClipboard('npx dembrandt bmw.de')">
+          <div class="mb-12 sm:mb-16 animate-fade-in-up animation-delay-250 px-4">
+            <div class="inline-block w-full max-w-3xl glass-card rounded-xl p-4 sm:p-6 md:p-8 text-left shadow-2xl hover:shadow-brand-500/10 transition-shadow duration-300 group border border-brand-500/10">
+              <div class="flex items-center justify-between mb-4 sm:mb-5">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-1 h-6 bg-gradient-to-b from-brand-400 to-purple-500 rounded-full"></div>
+                  <span class="text-fluid-sm tracking-wide text-gray-400 font-medium">Install</span>
+                </div>
+                <button id="copyBtn" class="text-fluid-xs text-brand-400 hover:text-brand-300 transition-all duration-200 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg hover:bg-brand-900/30 active:scale-95 font-medium border border-brand-500/20 hover:border-brand-500/40" onclick="copyToClipboard('npm install -g dembrandt')" aria-label="Copy installation command">
                   <span id="copyText">Copy</span>
                 </button>
               </div>
-              <code class="text-brand-300 font-mono text-lg md:text-xl font-medium">
-                <span class="text-purple-400">npx</span> dembrandt <span class="text-gray-500">bmw.de</span>
+              <code class="text-brand-300 font-mono text-fluid-terminal font-medium block break-all">
+                <span class="text-purple-400 font-bold">npm</span> install -g <span class="text-white">dembrandt</span><span class="blinking-cursor">_</span>
               </code>
             </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-400">
-            <a href="#get-started" class="btn-primary-large group">
+          <!-- Demo Output -->
+          <div class="mb-12 sm:mb-16 animate-fade-in-up animation-delay-300 px-4">
+            <div class="inline-block w-full max-w-3xl bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 sm:p-8 text-left shadow-2xl border border-gray-800/50 font-mono text-fluid-sm">
+              <div class="text-brand-200 mb-4 font-bold flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <span class="text-white text-xs font-bold">A</span>
+                </div>
+                <span>Brand Extraction: <span class="text-white">acme.io</span></span>
+              </div>
+
+              <div class="space-y-4 text-gray-300">
+                <div>
+                  <div class="text-gray-500 mb-2">Colors</div>
+                  <div class="ml-4 flex flex-wrap gap-2">
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded border border-gray-700/50">
+                      <span class="inline-block w-3 h-3 rounded" style="background: #8B5CF6"></span>
+                      <span class="text-white text-fluid-xs">#8B5CF6</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded border border-gray-700/50">
+                      <span class="inline-block w-3 h-3 rounded" style="background: #1F2937"></span>
+                      <span class="text-white text-fluid-xs">#1F2937</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded border border-gray-700/50">
+                      <span class="inline-block w-3 h-3 rounded" style="background: #6B7280"></span>
+                      <span class="text-white text-fluid-xs">#6B7280</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-3 py-1.5 bg-gray-800/50 rounded border border-gray-700/50">
+                      <span class="inline-block w-3 h-3 rounded border border-gray-700" style="background: #F3F4F6"></span>
+                      <span class="text-white text-fluid-xs">#F3F4F6</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-gray-500 mb-2">Typography</div>
+                  <div class="ml-4 text-brand-300">Inter, system-ui, sans-serif</div>
+                </div>
+
+                <div>
+                  <div class="text-gray-500 mb-2">Spacing</div>
+                  <div class="ml-4 text-brand-300">4px, 8px, 12px, 16px, 24px, 32px</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 animate-fade-in-up animation-delay-400 px-4">
+            <a href="https://www.npmjs.com/package/dembrandt" class="btn-primary-large group w-full sm:w-auto justify-center quirky-tilt" aria-label="Install via npm">
               Get Started
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
             </a>
-            <a href="https://github.com/dembrandt/dembrandt.com" class="btn-secondary-large group">
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/thevangelist/dembrandt" class="btn-secondary-large group w-full sm:w-auto justify-center quirky-tilt" aria-label="View source code on GitHub">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
               </svg>
               View on GitHub
@@ -103,181 +166,163 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Features Section -->
-  <div class="container mx-auto px-6 py-32">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-20">
-        <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Everything You Need</h2>
-        <p class="text-xl text-gray-500 max-w-2xl mx-auto">Production-ready design system extraction built for modern teams</p>
-      </div>
+  <!-- What's Next Section -->
+  <section class="relative py-12 sm:py-16 md:py-20 overflow-hidden" aria-labelledby="roadmap-heading">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900/50 to-gray-950"></div>
+    <div class="absolute inset-0 bg-grid opacity-5"></div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Feature 1 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-brand-500/20 to-brand-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Colors & Palettes</h3>
-          <p class="text-gray-500 leading-relaxed">Extract brand colors with confidence scoring. Semantic colors, CSS variables, and full color palettes.</p>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-5xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 id="roadmap-heading" class="text-fluid-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent px-4">
+            What's <span class="inline-block hover:rotate-6 transition-transform">Next</span>
+          </h2>
+          <p class="text-fluid-md text-gray-400 px-4">
+            Features <span class="text-brand-400">→</span> upcoming
+          </p>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Typography</h3>
-          <p class="text-gray-500 leading-relaxed">Font families, sizes, weights, and sources. Complete typography scale extraction.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
-          <p class="text-gray-500 leading-relaxed">Parallel extraction with Playwright. Get results in seconds, not minutes.</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Spacing & Layout</h3>
-          <p class="text-gray-500 leading-relaxed">Margin/padding scales, borders, shadows, and breakpoints automatically detected.</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">Component Analysis</h3>
-          <p class="text-gray-500 leading-relaxed">Extract button styles, inputs, links, and other UI component patterns.</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="feature-card group">
-          <div class="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-            <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">JSON Export</h3>
-          <p class="text-gray-500 leading-relaxed">Export design tokens as JSON for direct integration into your design system.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Use Cases -->
-  <div class="container mx-auto px-6 py-32">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-20">
-        <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Built For Teams</h2>
-        <p class="text-xl text-gray-500">Trusted by designers and developers at leading companies</p>
-      </div>
-
-      <div class="space-y-6">
-        <div class="use-case-card group">
-          <div class="flex items-start space-x-6">
-            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform duration-300">
-              01
+        <!-- Roadmap Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+          <!-- Roadmap Item -->
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-brand-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-brand-300 transition-colors">Multi-page Analysis</h3>
             </div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold mb-3">Brand Audits & Competitive Analysis</h3>
-              <p class="text-gray-500 text-lg">Compare design systems across competitors. Extract and analyze brand consistency.</p>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Extract design systems across multiple pages for comprehensive site-wide analysis
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-purple-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-purple-300 transition-colors">Accessibility Audit</h3>
             </div>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Automated accessibility checks and WCAG compliance scoring
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-cyan-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">Figma Integration</h3>
+            </div>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Export design tokens directly to Figma with one-click connectors
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-emerald-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-emerald-300 transition-colors">Browser Extension</h3>
+            </div>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Extract design systems on-the-fly while browsing any website
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-pink-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-pink-300 transition-colors">Gradient Analysis</h3>
+            </div>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Detect and extract complex gradient patterns and effects
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div class="flex items-start space-x-3 mb-3">
+              <div class="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-orange-500 animate-pulse group-hover:scale-150 transition-transform"></div>
+              <h3 class="text-fluid-lg font-semibold text-white group-hover:text-orange-300 transition-colors">Tone of Voice</h3>
+            </div>
+            <p class="text-fluid-sm text-gray-400 leading-relaxed">
+              Analyze brand voice, messaging patterns, and content style
+            </p>
           </div>
         </div>
 
-        <div class="use-case-card group">
-          <div class="flex items-start space-x-6">
-            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300">
-              02
-            </div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold mb-3">Design System Documentation</h3>
-              <p class="text-gray-500 text-lg">Automatically document existing design systems. Generate design token JSON files.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="use-case-card group">
-          <div class="flex items-start space-x-6">
-            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-pink-500/30 group-hover:scale-110 transition-transform duration-300">
-              03
-            </div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-semibold mb-3">Multi-Site Brand Consolidation</h3>
-              <p class="text-gray-500 text-lg">Analyze design consistency across multiple properties. Identify divergence and opportunities.</p>
-            </div>
-          </div>
+        <!-- View All Link -->
+        <div class="text-center mt-8 sm:mt-10 md:mt-12">
+          <a href="https://github.com/thevangelist/dembrandt/issues" class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 transition-colors duration-200 font-medium px-4" aria-label="View full roadmap on GitHub">
+            <span class="text-fluid-base">View full roadmap on GitHub</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- CTA Section -->
-  <div class="container mx-auto px-6 py-32">
-    <div class="max-w-4xl mx-auto">
-      <div class="relative overflow-hidden cta-card text-center">
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-500/10 to-purple-500/10"></div>
-        <div class="relative z-10 p-16">
-          <h2 class="text-5xl md:text-6xl font-bold mb-6">Ready to Extract?</h2>
-          <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Get started in seconds. No configuration required.</p>
-
-          <div class="inline-block glass-card rounded-2xl p-6 mb-10">
-            <code class="text-brand-300 font-mono text-lg font-medium">
-              <span class="text-purple-400">npm</span> install -g dembrandt
-            </code>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://www.npmjs.com/package/dembrandt" class="btn-primary-large">
-              Install Now
-            </a>
-            <a href="https://github.com/dembrandt/dembrandt.com" class="btn-secondary-large">
-              View Docs
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-800/50 py-16">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="flex items-center space-x-3 mb-6 md:mb-0">
-          <div class="w-8 h-8 bg-gradient-to-br from-brand-400 to-purple-500 rounded-xl shadow-lg"></div>
-          <span class="font-bold text-lg">Dembrandt</span>
+  <footer class="relative border-t border-gray-800/50 bg-gray-950" role="contentinfo">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+      <div class="max-w-2xl mx-auto">
+        <!-- Brand Column -->
+        <div class="text-center mb-8 sm:mb-12">
+          <div class="flex items-center justify-center mb-6">
+            <img src="./dembrandt-logo.png" alt="Dembrandt" class="h-10 w-auto">
+          </div>
+          <p class="text-fluid-base text-gray-400 leading-relaxed mb-8">
+            CLI tool for extracting design tokens from websites. <span class="text-brand-400 font-mono">MIT</span> licensed.
+          </p>
+          <div class="flex items-center justify-center space-x-6">
+            <a href="https://github.com/thevangelist/dembrandt" class="text-gray-400 hover:text-white transition-all duration-200 hover:scale-110" aria-label="GitHub">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8 hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+              </svg>
+            </a>
+            <a href="https://www.npmjs.com/package/dembrandt" class="text-gray-400 hover:text-white transition-all duration-200 hover:scale-110" aria-label="npm">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8 hover:-rotate-12 transition-transform" viewBox="0 0 780 250" fill="currentColor">
+                <path d="M240,250h100v-50h100V0H240V250z M340,50h50v100h-50V50z M480,0v200h100V50h50v150h50V50h50v150h50V0H480z M0,200h100V50h50v150h50V0H0V200z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="flex items-center space-x-8 text-sm text-gray-500">
-          <a href="https://github.com/dembrandt/dembrandt.com" class="hover:text-white transition-colors">GitHub</a>
-          <a href="#docs" class="hover:text-white transition-colors">Documentation</a>
-          <a href="https://www.npmjs.com/package/dembrandt" class="hover:text-white transition-colors">npm</a>
-          <span class="text-gray-600">MIT License</span>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-gray-800/50 text-center">
+          <p class="text-fluid-base text-gray-500 italic max-w-2xl mx-auto">
+            "Practice what you know, and it will help to make clear what now you do not know."
+            <span class="block text-fluid-sm text-gray-600 mt-2 not-italic">— Rembrandt</span>
+          </p>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
+    // Fetch GitHub stars
+    fetch('https://api.github.com/repos/thevangelist/dembrandt')
+      .then(res => res.json())
+      .then(data => {
+        const stars = data.stargazers_count || 0;
+        document.getElementById('github-stars').textContent = stars.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById('github-stars').textContent = '0';
+      });
+
+    // Fetch npm downloads
+    fetch('https://api.npmjs.org/downloads/point/last-month/dembrandt')
+      .then(res => res.json())
+      .then(data => {
+        const downloads = data.downloads || 0;
+        document.getElementById('npm-downloads').textContent = downloads.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById('npm-downloads').textContent = '0';
+      });
+
     function copyToClipboard(text) {
       const btn = document.getElementById('copyBtn');
       const btnText = document.getElementById('copyText');
@@ -292,6 +337,21 @@
         }, 2000);
       });
     }
+
+    // Subtle parallax effect on floating orbs
+    document.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e;
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const moveX = (clientX - centerX) / 100;
+      const moveY = (clientY - centerY) / 100;
+
+      const orbs = document.querySelectorAll('.animate-float, .animate-float-delayed, .animate-pulse-slow');
+      orbs.forEach((orb, index) => {
+        const factor = (index + 1) * 0.15;
+        orb.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px)`;
+      });
+    });
   </script>
 </body>
 </html>
